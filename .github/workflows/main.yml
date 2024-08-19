@@ -1,6 +1,6 @@
 name: Build Kernel
 on:
-  workflow _dispatch
+  workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v4.1.1
       - name: Init Repo
         run: |
-          bash -x ./ci.sh
+          bash -x ./build.sh
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v4.3.1
         with:
